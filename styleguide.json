@@ -14,6 +14,11 @@
 			"title": "Buttons",
 			"componentName": "buttons",
 			"description": "Here are the buttons"
+		},
+		{
+			"title": "Loader",
+			"componentName": "loader",
+			"description": "Here is a loader. Override width, height, border colors, and border width to customizer your loader."
 		}
 	]
 }
