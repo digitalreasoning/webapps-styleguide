@@ -15,12 +15,13 @@ Example:  "package": "git://github.com/username/package.git#commit"
 ## Reference the styleguide
 You may wish to just view the styleguide for reference. If so, clone this repo, run `npm install` and then `node server`.
 
-Navigate to http://localhost:8081/. All less files will be automatically compiled as you manually refresh the browser. Change elements using the styleguide.json config file.
+Navigate to http://localhost:8081/. All less files will be automatically compiled as you manually refresh the browser. Use the styleguide.json config file to alter which elements belong in the styleguide.
 
 ## Developing on the styleguide itself
 If you want to develop on the styleguide, simply clone this repo, and run `npm install` and then `npm link` from inside this repo.
 
 In your app's package.json, reference the local version of the repo like this:
+
 `"webapps-styleguide": "file:/Path/to/local/webapp-styleguide"`
 
 Then run `npm link styleguide` (where styleguide is the name of the repo) from your application.
