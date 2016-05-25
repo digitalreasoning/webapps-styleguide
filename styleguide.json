@@ -1,0 +1,19 @@
+{
+	"elements": [
+		{
+			"title": "Tables",
+			"componentName": "tables",
+			"description": "Here are the tables"
+		},
+		{
+			"title": "Pagination",
+			"componentName": "pagination",
+			"description": "Here is the pagination"
+		},
+		{
+			"title": "Buttons",
+			"componentName": "buttons",
+			"description": "Here are the buttons"
+		}
+	]
+}

@@ -1,0 +1,106 @@
+@import '../common/vars.less';
+@import '../components/pagination/pagination.less';
+@import '../components/tables/tables.less';
+@import '../components/buttons/buttons.less';
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+.styleguide-wrap {
+	display: flex;
+	flex-direction: row;
+}
+
+.col-left {
+	flex: 0 0 250px;
+	height: 100vh;
+	overflow: auto;
+	position: relative;
+	background: #efefef;
+	border-right: 1px solid #ccc;
+
+	.element-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: block;
+			height: 50px;
+			a {
+				display: block;
+				line-height: 50px;
+				border-bottom: 1px solid #ccc;
+				text-decoration: none;
+				padding: 0 20px;
+				color: #999;
+
+				&:hover {
+					background: #ccc;
+					color: #333;
+				}
+			}
+		}
+	}
+}
+
+.col-right {
+	flex: 1 0 auto;
+	height: 100vh;
+	overflow: auto;
+}
+h1 {
+	font-weight: 700;
+	text-align: center;
+	background: @bluegray600;
+	color: #fff;
+	margin: 0;
+	padding: 20px;
+}
+
+section {
+	padding: 40px;
+
+	.wrap {
+		width: 80%;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	h2 {
+		font-size: 40px;
+		font-weight: 400;
+		margin: 0;
+	}
+}
+
+
+.intro {
+}
+
+.elements {
+	background: #fff url('../wavegrid.png') repeat;
+}
+
+.element {
+	margin: 0 0 100px 0;
+	padding: 20px 0;
+
+	h3 {
+		margin: 0;
+		position: relative;
+		font-size: 28px;
+		font-weight: 400;
+		padding-bottom: 5px;
+	}
+}
+
+pre {
+	height: 200px;
+	overflow: auto;
+	font-size: 12px;
+	border: 1px solid #ccc;
+}

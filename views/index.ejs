@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Digital Reasoning Web Apps Style Guide</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+	<link href="node_modules/prismjs/themes/prism.css" rel="stylesheet" />
+	<link rel="stylesheet" href="less-css/styleguide.css" />
+</head>
+<body class="language-markup">
+	<script src="node_modules/prismjs/prism.js"></script>
+	<div class="styleguide-wrap">
+		<div class="col-left">
+			<ul class="element-list">
+				<li><a href="#intro">Intro</a></li>
+				<% for(var i=0; i < elements.length; i++) {%>
+					<li>
+						<a href="#<%= elements[i].componentName %>"><%= elements[i].title %></a>
+					</li>
+				<% } %>
+			</ul>
+		</div>
+		<div class="col-right">
+			<h1 id="intro">Web Apps Style Guide</h1>
+			<section class="intro">
+				<div class="wrap">
+					<h2>Intro</h2>
+					<p>
+					This is a barebones styleguide for some common elements in use across Digital Reasoning applications.
+					</p>
+					<h3>Usage</h3>
+					<p>
+					Add this repo to your package.json and run `npm install`.
+					</p>
+					<p>If installing from a local repo:     "drstyleguide": "file:/Users/btedder/Documents/dev/drstyleguide"</p>
+					<p>
+					Reference .less files into your files as you would with bootstrap or any other framework. LESS example: @import ‘~drstyleguide/common/base.less’; 
+					</p>
+
+					<h3>Maintenance</h3>
+					<p>If you want to develop on the styleguide, simply run ‘npm link’ from inside the styleguide repo and then run ‘npm link styleguide’ (where styleguide is the name of the repo) in the project you’re working in. You can also run ‘node server’ from the styleguide repo to see changes at http://localhost:8081/. All less files will be automatically compiled as you manually refresh the browser. Change elements using the styleguide.json config file.</p>
+					<p>
+					<h3>Future-proofing</h3>
+					<p>Projects can lock to a specific commit of the style guide so as to not pull in breaking changes if they so desire. But from time to time, it is recommended to bump your version of the style guide in your app to stay up to date.
+					</p>
+					<p>
+					Example:  "package": "git://github.com/username/package.git#commit"
+					</p>
+				</p>
+			</section>
+
+			<section class="elements">
+				<div class="wrap">
+					<h2>Elements</h2>
+
+					<!-- Loop through the elements array and print out blocks -->
+					<% for(var i=0; i < elements.length; i++) {%>
+						<div class="element" id="<%= elements[i].componentName %>">
+							<h3><%= elements[i].title %></h3>
+							<p><%= elements[i].description %></p>
+							<div class="example"><%- include('../components/' + elements[i].componentName + '/' + elements[i].componentName) %></div>
+							<pre class="language-markup" data-src="../components/<%= elements[i].componentName %>/<%= elements[i].componentName %>.ejs"></pre>
+						</div>
+					<% } %>
+
+				</div>
+			</section>
+		</div>
+	</div>
+
+</body>
+</html>
