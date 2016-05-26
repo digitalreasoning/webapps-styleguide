@@ -24,6 +24,11 @@
 			"title": "Toggle",
 			"componentName": "toggle",
 			"description": "Here is a toggle. Override the color and fade() color of the toggle and its pseudo element when active to match your color scheme."
+		},
+		{
+			"title": "Inputs",
+			"componentName": "inputs",
+			"description": "Some basic form elements."
 		}
 	]
 }

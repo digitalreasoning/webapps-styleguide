@@ -1,6 +1,15 @@
-input[type=text],
-input[type=password] {
-	padding: 5px;
-	border: 1px solid #ccc;
+.dr-input,
+.dr-select {
+	background: @white;
+	-webkit-appearance: none;
+	padding: 10px;
+	width: 150px;
+	border: 2px solid @gray300;
 	outline: 0;
+	display: block;
+	border-radius: 0;
+
+	&:focus {
+		border-color: @gray400;
+	}
 }
