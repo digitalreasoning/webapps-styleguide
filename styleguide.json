@@ -3,22 +3,27 @@
 		{
 			"title": "Tables",
 			"componentName": "tables",
-			"description": "Here are the tables"
+			"description": "Basic tables."
 		},
 		{
 			"title": "Pagination",
 			"componentName": "pagination",
-			"description": "Here is the pagination"
+			"description": "Global pagination."
 		},
 		{
 			"title": "Buttons",
 			"componentName": "buttons",
-			"description": "Here are the buttons"
+			"description": "A collection of different types of buttons and states."
 		},
 		{
 			"title": "Loader",
 			"componentName": "loader",
 			"description": "Here is a loader. Override width, height, border colors, and border width to customizer your loader. The loader-wrap is just a wrapping element to help position the loader in different settings (ie, buttons, centered, etc). The loader will work just fine without that wrapper."
+		},
+		{
+			"title": "Toggle",
+			"componentName": "toggle",
+			"description": "Here is a toggle. Override the color and fade() color of the toggle and its pseudo element when active to match your color scheme."
 		}
 	]
 }
