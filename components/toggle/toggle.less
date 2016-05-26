@@ -6,7 +6,8 @@
 	height: 12px;
 	position: relative;
 	border-radius: 5px;
-	background: @gray400;
+	background: @gray300;
+	cursor: pointer;
 
 	&:after {
 		content: '';
@@ -24,11 +25,15 @@
 	}
 
 	&.active {
-		background: fade(@green700, 60%);
+		background: tint(@green700, 60%);
 
 		&:after {
 			left: 100%;
 			background: @green700;
 		}
+	}
+
+	&[disabled=disabled] {
+		opacity: .5;
 	}
 }
