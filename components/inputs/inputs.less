@@ -13,3 +13,43 @@
 		border-color: @gray400;
 	}
 }
+
+
+.dr-checkbox {
+	display: none;
+}
+
+.dr-checkbox + label {
+	font-weight: 600;
+	display: block;
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+
+	&:after {
+		display: block;
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		outline: none;
+		border: 1px solid @gray400;
+		border-radius: 2px;
+		content: '';
+		transition: all 150ms linear;
+	}
+
+	&:hover {
+		&:after {
+			background: #ccc;
+		}
+	}
+}
+
+.dr-checkbox:checked + label {
+	&:after {
+		background: blue url('./check.svg') no-repeat center center;
+	}
+}
