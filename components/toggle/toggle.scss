@@ -1,0 +1,40 @@
+.dr-toggle {
+	border: none;
+	outline: 0;
+	display: block;
+	width: 25px;
+	height: 12px;
+	position: relative;
+	border-radius: 5px;
+	background: $gray300;
+	cursor: pointer;
+	overflow: visible;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		transition: left 150ms linear;
+		box-shadow: 2px 2px 6px -3px $gray700;
+		background: $white;
+	}
+
+	&.active {
+		background: tint($green700, 60%);
+
+		&:after {
+			left: 90%;
+			background: $green700;
+		}
+	}
+
+	&[disabled=disabled] {
+		opacity: .5;
+	}
+}

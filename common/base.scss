@@ -1,0 +1,10 @@
+* {
+	box-sizing: border-box;
+}
+@import './vars.scss';
+@import '../components/loader/loader.scss';
+@import '../components/inputs/inputs.scss';
+@import '../components/pagination/pagination.scss';
+@import '../components/tables/tables.scss';
+@import '../components/toggle/toggle.scss';
+@import '../components/buttons/buttons.scss';

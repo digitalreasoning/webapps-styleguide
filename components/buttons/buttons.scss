@@ -1,0 +1,112 @@
+@import '../loader/loader.scss';
+
+.dr-btn {
+  display: inline-block;
+  padding: 10px 15px 10px 15px;
+  margin: 0 8px 0 8px;
+  min-width: 120px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  outline: none;
+
+  .loader-wrap {
+  	display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  &.primary {
+    background-color: $green700;
+    color: $white;
+
+    &:hover {
+      background-color: shade($green700, 20%);
+    }
+    &[disabled=disabled] {
+      background-color: fade($green700, 60%);
+    }
+  }
+  &.secondary {
+    background-color: $bluegray300;
+    color: $white;
+    &:hover {
+      background-color: shade($bluegray300, 20%);
+    }
+  }
+  &.danger {
+    background-color: $red500;
+    color: $white;
+    &:hover {
+      background-color: $red700;
+    }
+  }
+  &.white {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    &:hover {
+      color: fade($white, 60%);
+      border-color: fade($white, 60%);
+    }
+    &[disabled=disabled] {
+      color: fade($white, 60%);
+      border-color: fade($white, 60%);
+    }
+  }
+  &.clear {
+    background-color: transparent;
+    color: $gray600;
+    &:hover {
+      background-color: shade($white, 20%);
+    }
+    &[disabled=disabled] {
+      background-color: transparent;
+      color: $gray300;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+  &.page-btn {
+    min-width: 0px;
+    padding: 8px;
+  }
+  &.btn-loading {
+  	position: relative;
+  	.btn-text {
+  		opacity: 0;
+  	}
+    .loader-wrap {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+	    
+	    .loader {
+	      display: block;
+	      border-width: 2px;
+	      height: 13px;
+	      width: 13px;
+	      border-color: rgba(255, 255, 255, .2);
+	      border-left-color: #fff;
+	    }
+    }
+  }
+  &[disabled=disabled] {
+    cursor: auto;
+  }
+  &.disabled {
+    background-color: $gray300 !important;
+    &:hover {
+      background-color: $gray300 !important;
+    }
+  }
+}

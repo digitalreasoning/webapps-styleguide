@@ -1,0 +1,48 @@
+.pagination {
+	width: 100%;
+	border-top: 1px solid $gray400;
+	border-bottom: 1px solid $gray400;
+	height: 70px;
+	position: relative;
+
+	.description {
+		position: absolute;
+		top: 50%;
+		left: 30px;
+		transform: translate(0, -50%);
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $gray700;
+		letter-spacing: 1px;
+	}
+	.numbers {
+		position: absolute;
+		top: 50%;
+		right: 30px;
+		transform: translate(0, -50%);
+		text-align: right;
+
+		.dr-btn {
+			min-width: 10px;
+			background: transparent;
+			cursor: pointer;
+			line-height: 12px;
+			
+			&.page {
+				font-weight: 700;
+				color: $black;
+			}
+
+			&:hover, &.active {
+				background: $amber500;
+				cursor: pointer;
+				color: $white;
+			}
+
+			&[disabled] {
+				background: transparent;
+				color: $gray400;
+			}
+		}
+	}
+}
